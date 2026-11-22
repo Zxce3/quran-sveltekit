@@ -6,8 +6,9 @@
 <footer>
 	<div class="container">
 		<p>
-			{SITE_NAME} &middot; a SvelteKit recreation of
-			<a href="https://github.com/Zxce3/quranJekyll" rel="noopener">quranJekyll</a> by Zxce3.
+			{SITE_NAME} &middot; by <a href="https://github.com/Zxce3" rel="noopener">Zxce3</a>, a
+			SvelteKit rewrite of
+			<a href="https://github.com/Zxce3/quranJekyll" rel="noopener">quranJekyll</a>.
 			<a href={resolve('/about')}>About &amp; credits</a>
 		</p>
 	</div>

@@ -3,7 +3,7 @@
 A static, fully prerendered Quran reader: 114 surahs, 6,236 ayat, Arabic text with Indonesian and English
 translations and Kemenag tafsir, built with SvelteKit 3, Svelte 5 (runes) and `adapter-static`.
 
-This is a recreation of [quranJekyll](https://github.com/Zxce3/quranJekyll) by Zxce3. The original is a Jekyll
+This is a SvelteKit rewrite of my earlier [quranJekyll](https://github.com/Zxce3/quranJekyll) site. The original is a Jekyll
 site where every surah is a modal on one 13 MB page; this version gives each surah its own URL and adds search,
 settings and bookmarks. See [NOTES.md](NOTES.md) for a full comparison and the decisions made.
 

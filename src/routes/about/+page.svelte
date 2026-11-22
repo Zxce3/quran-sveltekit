@@ -6,7 +6,7 @@
 
 <SeoHead
 	title="About"
-	description="About Quran ku: a static SvelteKit recreation of the quranJekyll site, with credits and data sources."
+	description="About Quran ku, a static Quran reader by Zxce3 (a SvelteKit rewrite of quranJekyll), with credits and data sources."
 	path={resolve('/about')}
 />
 
@@ -14,9 +14,11 @@
 	<h1>About</h1>
 	<p>
 		Quran ku is a fast, static Quran reader: {SURAH_COUNT} surahs, {AYAH_COUNT.toLocaleString('en')} ayat,
-		Arabic text with Indonesian and English translations, and Kemenag tafsir. It is a SvelteKit recreation
-		of <a href="https://github.com/Zxce3/quranJekyll" rel="noopener">quranJekyll</a> by Zxce3, originally
-		a Jekyll site built with the Halfmoon UI kit.
+		Arabic text with Indonesian and English translations, and Kemenag tafsir. Made by
+		<a href="https://github.com/Zxce3" rel="noopener">Zxce3</a>. It is a SvelteKit rewrite of my
+		earlier
+		<a href="https://github.com/Zxce3/quranJekyll" rel="noopener">quranJekyll</a> site, which was built
+		with Jekyll and the Halfmoon UI kit.
 	</p>
 
 	<h2>Features</h2>
