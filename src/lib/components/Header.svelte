@@ -5,7 +5,10 @@
 	import ThemeToggle from './ThemeToggle.svelte';
 
 	const links = [
-		{ href: resolve('/'), label: 'Surahs' }
+		{ href: resolve('/'), label: 'Surahs' },
+		{ href: resolve('/bookmarks'), label: 'Bookmarks' },
+		{ href: resolve('/settings'), label: 'Settings' },
+		{ href: resolve('/about'), label: 'About' }
 	];
 
 	const isCurrent = (href: string) => page.url.pathname === href;
@@ -17,6 +20,18 @@
 			<img class="logo" src={asset('favicon.svg')} alt="" width="32" height="32" />
 			{SITE_NAME}
 		</a>
+
+		<form class="search" role="search" action={resolve('/search')} method="get">
+			<label class="sr-only" for="site-search">Search the Quran</label>
+			<input
+				id="site-search"
+				type="search"
+				name="q"
+				placeholder="Search ayat…"
+				autocomplete="off"
+				enterkeyhint="search"
+			/>
+		</form>
 
 		<nav aria-label="Main">
 			<ul>

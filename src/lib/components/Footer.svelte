@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import { SITE_NAME } from '#lib/config.ts';
 </script>
 
@@ -7,6 +8,7 @@
 		<p>
 			{SITE_NAME} &middot; a SvelteKit recreation of
 			<a href="https://github.com/Zxce3/quranJekyll" rel="noopener">quranJekyll</a> by Zxce3.
+			<a href={resolve('/about')}>About &amp; credits</a>
 		</p>
 	</div>
 </footer>
