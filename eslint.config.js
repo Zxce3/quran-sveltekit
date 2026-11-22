@@ -40,5 +40,10 @@ export default defineConfig(
 		// Override or add rule settings here, such as:
 		// 'svelte/button-has-type': 'error'
 		rules: {}
+	},
+	{
+		// Plain Node scripts are outside the TypeScript project.
+		files: ['scripts/**/*.mjs'],
+		...ts.configs.disableTypeChecked
 	}
 );
