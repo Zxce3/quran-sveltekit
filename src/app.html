@@ -1,9 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="text-scale" content="scale" />
+		<script>
+			// Apply the saved theme before first paint to avoid a flash of the wrong theme.
+			try {
+				var s = JSON.parse(localStorage.getItem('quran:settings:v1') || '{}');
+				var t = s.theme === 'light' || s.theme === 'system' ? s.theme : 'dark';
+				if (t === 'system') {
+					t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+				}
+				document.documentElement.setAttribute('data-theme', t);
+			} catch (e) {}
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">

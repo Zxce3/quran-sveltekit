@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Quran">
+  <rect width="512" height="512" rx="104" fill="#0f5f55"/>
+  <path d="M168 128h176a24 24 0 0 1 24 24v232a24 24 0 0 1-24 24H168a24 24 0 0 1-24-24V152a24 24 0 0 1 24-24z" fill="#fdf6e3"/>
+  <path d="M256 128v280" stroke="#0f5f55" stroke-width="14"/>
+  <path d="M300 216a52 52 0 1 0 0 80 42 42 0 0 1 0-80z" fill="#0f5f55" transform="translate(-72 8)"/>
+  <circle cx="322" cy="232" r="10" fill="#0f5f55"/>
+  <path d="M200 330h40M200 358h40M272 330h40M272 358h40" stroke="#0f5f55" stroke-width="10" stroke-linecap="round"/>
+</svg>

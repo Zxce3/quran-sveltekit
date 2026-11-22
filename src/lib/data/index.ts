@@ -2,7 +2,7 @@ import surahData from './surahs.json';
 import type { Surah, Verse } from './types';
 
 export type { Surah, Verse, Tafsir, TranslationChoice } from './types';
-export { BISMILLAH, displayArabic, showsBismillahHeading } from './bismillah';
+export { BISMILLAH, displayArabic, displayArabicText, showsBismillahHeading } from './bismillah';
 
 export const SURAH_COUNT = 114;
 export const AYAH_COUNT = 6236;

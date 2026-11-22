@@ -14,8 +14,10 @@ export default defineConfig({
 				runes: ({ filename }) =>
 					filename.split(/[/\\]/).includes('node_modules') ? undefined : true
 			},
-			adapter: adapter({ pages: 'build', assets: 'build', strict: true }),
-			paths: { base },
+			// 404.html is the client-side fallback GitHub Pages serves for unknown URLs.
+			adapter: adapter({ pages: 'build', assets: 'build', fallback: '404.html' }),
+			// Root-relative URLs (not relative ones) so canonical/OG/sitemap URLs can be made absolute.
+			paths: { base, relative: false },
 			prerender: { handleHttpError: 'fail', handleMissingId: 'fail' }
 		})
 	],

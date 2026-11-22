@@ -20,8 +20,13 @@ export function showsBismillahHeading(surahId: number): boolean {
  * the same at display time. The stored text is never modified.
  */
 export function displayArabic(surahId: number, verse: Verse): string {
-	if (verse.n === 1 && showsBismillahHeading(surahId) && verse.ar.startsWith(BISMILLAH)) {
-		return verse.ar.slice(BISMILLAH.length).trimStart();
+	return displayArabicText(surahId, verse.n, verse.ar);
+}
+
+/** Same as {@link displayArabic} for raw text (e.g. entries of the search index). */
+export function displayArabicText(surahId: number, ayah: number, text: string): string {
+	if (ayah === 1 && showsBismillahHeading(surahId) && text.startsWith(BISMILLAH)) {
+		return text.slice(BISMILLAH.length).trimStart();
 	}
-	return verse.ar;
+	return text;
 }
