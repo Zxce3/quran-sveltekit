@@ -53,8 +53,8 @@ pnpm test    # also compares every ayah and tafsir entry with the reference
 ### GitHub Pages
 
 `.github/workflows/deploy.yml` installs, checks, lints, tests, builds and deploys on every push to `main`.
-In the repository settings choose **Pages → Source: GitHub Actions**. The workflow takes the base path and
-origin from `actions/configure-pages`, so project sites (`/<repo>/`) and user sites both work.
+In the repository settings choose **Pages → Source: GitHub Actions**. The workflow derives the base path and
+origin from the repository name, so project sites (`/<repo>/`) and `<user>.github.io` sites both work.
 
 ### Any static host
 

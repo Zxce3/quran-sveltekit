@@ -37,15 +37,16 @@ jobs:
       - name: Unit tests
         run: pnpm test
 
-      - uses: actions/configure-pages@v6
-        id: pages
+      - name: Work out Pages base path and origin
+        run: |
+          owner="${GITHUB_REPOSITORY_OWNER,,}"
+          repo="${GITHUB_REPOSITORY#*/}"
+          if [ "${repo,,}" = "$owner.github.io" ]; then base=""; else base="/$repo"; fi
+          echo "BASE_PATH=$base" >> "$GITHUB_ENV"
+          echo "VITE_SITE_URL=https://$owner.github.io" >> "$GITHUB_ENV"
 
       - name: Build
         run: pnpm build
-        env:
-          # "" for user/org sites, "/<repo>" for project sites
-          BASE_PATH: ${{ steps.pages.outputs.base_path }}
-          VITE_SITE_URL: ${{ steps.pages.outputs.origin }}
 
       - name: Verify prerendered output
         run: pnpm test

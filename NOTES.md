@@ -114,7 +114,7 @@ No juz/page/ayah routes: the reference has no juz or page data, and inventing it
 - **Licence**: the reference has no licence. The new code is MIT. The data is **not** covered by that
   licence; its origin is unstated upstream (see README).
 - **Site URL / base path**: default `https://zxce3.github.io` (the reference's author). Override with
-  `VITE_SITE_URL` and `BASE_PATH`; the GitHub Actions workflow sets both from `actions/configure-pages`.
+  `VITE_SITE_URL` and `BASE_PATH`; the GitHub Actions workflow derives both from the repository name.
 - **Path alias**: this SvelteKit version deprecates `kit.alias`/`$lib`; the project uses Node subpath imports
   (`#lib/*` in `package.json`, imports include the `.ts` extension).
 - **Param matchers**: SvelteKit 3 matchers are Standard Schema based; a plain `[id]` route with `entries()` and
